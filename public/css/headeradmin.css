@@ -1,0 +1,76 @@
+nav.header-admin {
+  background-color: #EAA64D;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: white;
+  height: 70px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+nav ul li img {
+  max-height: 50px;
+}
+
+/* Tetap: Sidebar dan Responsive */
+.menu-button { display: none; }
+
+.sidebar {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 70%;
+  height: 100vh;
+  background-color: #EAA64D;
+  padding: 20px;
+  z-index: 999;
+}
+
+.sidebar.active {
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  .sidebar {
+    display: none !important;
+  }
+  .hideOnMobile {
+    display: inline;
+  }
+  .menu-button {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: inline;
+  }
+}
